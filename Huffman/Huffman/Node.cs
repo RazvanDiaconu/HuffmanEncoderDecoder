@@ -20,22 +20,12 @@ namespace Huffman
         {
             eFrunza = false;
             nodParinte = null;
-            if (nod1.frecventa >= nod2.frecventa)
-            {
-                frecventa = nod1.frecventa + nod2.frecventa;
                 caracter = nod1.caracter + nod2.caracter;
-                nodDreapta = nod1;
-                nodStanga = nod2;
-                nodDreapta.nodParinte = nodStanga.nodParinte = this;
-            }
-            else if (nod1.frecventa < nod2.frecventa)
-            {
-                caracter = nod2.caracter + nod1.caracter;
                 frecventa = nod1.frecventa + nod2.frecventa;
                 nodDreapta = nod2;
                 nodStanga = nod1;
                 nodStanga.nodParinte = nodDreapta.nodParinte = this;
-            }
+            
         }
         public int CompareTo(Node other)
         {
